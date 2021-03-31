@@ -32,7 +32,9 @@ defmodule Raytracer.Mixfile do
       {:excoveralls, "~> 0.10", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.16", only: :dev, runtime: false},
       {:jason, "~> 1.1"},
-      {:propcheck, "~> 1.1", only: [:test]}
+      {:propcheck, "~> 1.1", only: [:test]},
+      {:exla, "~> 0.1.0-dev", github: "elixir-nx/nx", sparse: "exla"},
+      {:nx, "~> 0.1.0-dev", github: "elixir-nx/nx", sparse: "nx", override: true}
     ]
   end
 
