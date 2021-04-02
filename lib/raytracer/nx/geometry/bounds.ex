@@ -2,15 +2,15 @@ defmodule Raytracer.Nx.Geometry.Bounds do
   import Nx.Defn
   @default_defn_compiler EXLA
 
-  # 2x2, float 64
+  # 2x2, 2x3 float
   # @type t :: Nx.Tensor.t()
 
   def new2(x1, y1, x2, y2) when x1 <= x2 and y1 <= y2 do
-    Nx.tensor([[x1, y1], [x2, y2]], type: {:f, 64})
+    Nx.tensor([[x1, y1], [x2, y2]])
   end
 
   def new3(x1, y1, z1, x2, y2, z2) when x1 <= x2 and y1 <= y2 and z1 <= z2 do
-    Nx.tensor([[x1, y1, z1], [x2, y2, z2]], type: {:f, 64})
+    Nx.tensor([[x1, y1, z1], [x2, y2, z2]])
   end
 
   # def corner(bounds, 0) do
